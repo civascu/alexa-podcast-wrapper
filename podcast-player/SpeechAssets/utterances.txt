@@ -1,0 +1,30 @@
+PlayLatestEpisodeIntent play the latest episode
+PlayLatestEpisodeIntent play latest episode
+PlayLatestEpisodeIntent play last episode
+PlayLatestEpisodeIntent play the most recent episode
+PlayLatestEpisodeIntent play the newest episode
+
+PlayFirstEpisodeIntent play the first episode
+PlayFirstEpisodeIntent play first episode
+PlayFirstEpisodeIntent play the first one
+PlayFirstEpisodeIntent play from the beginning
+
+
+PlayEpisodeIntent play episode {episodeNumber}
+PlayEpisodeIntent play {episodeNumber}
+PlayEpisodeIntent start {episodeNumber}
+
+EpisodeDescriptionIntent what's episode {episodeNumber} about
+EpisodeDescriptionIntent what's the episode {episodeNumber} about
+EpisodeDescriptionIntent episode {episodeNumber} description
+
+LastEpisodeDescriptionIntent what's the latest episode about
+LastEpisodeDescriptionIntent what's latest episode about
+LastEpisodeDescriptionIntent what's the last episode about
+
+SetDirectionAscIntent play in chronological order
+SetDirectionAscIntent play first to last
+
+SetDirectionDescIntent play last to first
+SetDirectionDescIntent play in reverse
+SetDirectionDescIntent play latest first

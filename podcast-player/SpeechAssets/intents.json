@@ -1,0 +1,61 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.LoopOnIntent"
+    },
+    {
+      "intent": "AMAZON.LoopOffIntent"
+    },
+    {
+      "intent": "AMAZON.ShuffleOnIntent"
+    },
+    {
+      "intent": "AMAZON.ShuffleOffIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "PlayLatestEpisodeIntent"
+    },
+    {
+      "intent": "PlayEpisodeIntent",
+      "slots": [
+        {
+          "name": "episodeNumber",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "PlayFirstEpisodeIntent"
+    },
+    {
+      "intent": "EpisodeDescriptionIntent",
+      "slots": [
+        {
+          "name": "episodeNumber",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "LastEpisodeDescriptionIntent"
+    },
+    {
+      "intent": "SetDirectionAscIntent"
+    },
+    {
+      "intent": "SetDirectionDescIntent"
+    }
+  ]
+}
