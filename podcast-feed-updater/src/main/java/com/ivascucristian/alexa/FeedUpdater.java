@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.jsoup.Jsoup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,7 +69,7 @@ public class FeedUpdater {
 
     com.ivascucristian.alexa.model.Podcast podcast = new com.ivascucristian.alexa.model.Podcast();
     podcast.setName(podcastName);
-    podcast.setDescription(remotePodcast.getDescription());
+    podcast.setDescription(Jsoup.parse(remotePodcast.getDescription()).text());
 
     podcast.setEpisodeCount(remotePodcast.getEpisodes().size());
 
@@ -85,8 +86,10 @@ public class FeedUpdater {
       String epNoPrefix = "" + episode.getEpisodeNumber() + ": ";
       if (episode.getTitle().startsWith(epNoPrefix)) {
         episode.setTitle(episode.getTitle().substring(epNoPrefix.length()));
+      } else if (episode.getTitle().startsWith("0" + epNoPrefix)) {
+        episode.setTitle(episode.getTitle().substring(epNoPrefix.length() + 1));
       }
-      episode.setLongDescription(feedEpisode.getDescription());
+      episode.setLongDescription(Jsoup.parse(feedEpisode.getDescription()).text());
       episode.setUrl(feedEpisode.getEnclosure().getURL().toString()
           .replace("http://", "https://")); // alexa needs https
       episode.setDuration(feedEpisode.getEnclosure().getLength());
